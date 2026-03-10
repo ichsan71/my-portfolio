@@ -22,7 +22,7 @@ import { experiences } from "@/data/portfolio";
       <div class="relative">
         <!-- Vertical Line -->
         <div
-          class="absolute left-4 top-0 bottom-0 w-px bg-linear-to-b from-primary-500 via-primary-500/50 to-transparent md:left-1/2 md:-translate-x-px"
+          class="absolute left-4 top-0 bottom-0 w-px bg-linear-to-br from-primary-500 via-primary-500/50 to-transparent md:left-1/2 md:-translate-x-px"
         ></div>
 
         <div class="space-y-12">
