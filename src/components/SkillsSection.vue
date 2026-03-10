@@ -97,7 +97,7 @@ const getLevelColor = (level: number) => {
           <!-- Progress Bar -->
           <div class="h-1.5 w-full rounded-full bg-dark-700 overflow-hidden">
             <div
-              class="h-full rounded-full transition-all duration-700 bg-gradient-to-r"
+              class="h-full rounded-full transition-all duration-700 bg-linear-to-r"
               :class="getLevelColor(skill.level)"
               :style="{ width: skill.level + '%' }"
             ></div>

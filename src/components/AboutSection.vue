@@ -23,7 +23,7 @@ import { aboutMe } from "@/data/portfolio";
         <div class="lg:col-span-2 flex justify-center">
           <div class="relative w-full max-w-sm">
             <div
-              class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 rotate-3 opacity-20"
+              class="absolute inset-0 rounded-2xl bg-linear-to-br from-primary-500 to-primary-700 rotate-3 opacity-20"
             ></div>
             <div
               class="relative rounded-2xl bg-dark-800 border border-white/5 p-8 text-center"

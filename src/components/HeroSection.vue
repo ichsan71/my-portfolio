@@ -9,7 +9,7 @@ import { aboutMe, socialLinks } from "@/data/portfolio";
   >
     <!-- Background -->
     <div
-      class="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900"
+      class="absolute inset-0 bg-linear-to-br from-dark-900 via-dark-800 to-dark-900"
     ></div>
     <!-- Decorative blobs -->
     <div
@@ -51,7 +51,7 @@ import { aboutMe, socialLinks } from "@/data/portfolio";
       >
         {{ aboutMe.name.split(" ").slice(0, -1).join(" ") }}
         <span
-          class="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent"
+          class="bg-linear-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent"
         >
           {{ aboutMe.name.split(" ").slice(-1)[0] }}
         </span>

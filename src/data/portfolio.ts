@@ -1,5 +1,6 @@
 import mybco1 from "@/assets/mybco_1.png";
 import mybco2 from "@/assets/mybco_2.png";
+import mybco3 from "@/assets/mybco_3.png";
 import skinventory1 from "@/assets/skinventory_1.png";
 import skinventory2 from "@/assets/skinventory_2.png";
 import skinventory3 from "@/assets/skinventory_3.png";
@@ -162,7 +163,7 @@ export const projects: Project[] = [
     subtitle: "Sales CRM Platform",
     description:
       "An internal CRM mobile application designed for the sales team at PT Mazta Farma. The app enables real-time KPI performance monitoring, location-based check-in/check-out for field visits, and hierarchical approval workflows — streamlining sales operations and providing management with actionable insights.",
-    screenshots: [mybco1, mybco2],
+    screenshots: [mybco1, mybco2, mybco3],
     tags: ["Flutter", "Dart", "Clean Architecture", "REST API", "Google Maps"],
     role: "Lead Mobile Developer",
     color: "from-blue-600 to-cyan-500",

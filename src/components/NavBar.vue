@@ -51,7 +51,7 @@ onUnmounted(() => {
             v-for="link in navLinks"
             :key="link.href"
             :href="link.href"
-            class="text-sm font-medium text-gray-300 hover:text-primary-400 transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-400 after:transition-all hover:after:w-full"
+            class="text-sm font-medium text-gray-300 hover:text-primary-400 transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary-400 after:transition-all hover:after:w-full"
           >
             {{ link.label }}
           </a>

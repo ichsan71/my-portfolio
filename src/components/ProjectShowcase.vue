@@ -138,7 +138,7 @@ const projectNum = (index: number): string => {
           <!-- Background gradient per project -->
           <div class="absolute inset-0 pointer-events-none overflow-hidden">
             <div
-              class="absolute top-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-br opacity-[0.04] blur-[100px] transition-all duration-1000"
+              class="absolute top-1/2 -translate-y-1/2 h-150 w-150 rounded-full bg-linear-to-br opacity-[0.04] blur-[100px] transition-all duration-1000"
               :class="[
                 project.color,
                 index % 2 === 0 ? '-right-48' : '-left-48',
@@ -161,16 +161,16 @@ const projectNum = (index: number): string => {
                 <!-- Project Number + Role -->
                 <div class="flex items-center gap-4">
                   <span
-                    class="text-5xl sm:text-6xl font-black text-white/[0.04] leading-none tracking-tighter"
+                    class="text-5xl sm:text-6xl font-black text-white/4 leading-none tracking-tighter"
                   >
                     {{ projectNum(index) }}
                   </span>
                   <div>
                     <span
-                      class="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400"
+                      class="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/4 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400"
                     >
                       <span
-                        class="h-1.5 w-1.5 rounded-full bg-gradient-to-r"
+                        class="h-1.5 w-1.5 rounded-full bg-linear-to-r"
                         :class="project.color"
                       ></span>
                       {{ project.role }}
@@ -209,7 +209,7 @@ const projectNum = (index: number): string => {
                     :style="{ transitionDelay: `${500 + i * 120}ms` }"
                   >
                     <span
-                      class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r"
+                      class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-linear-to-r"
                       :class="project.color"
                     ></span>
                     <span class="text-sm text-gray-400 leading-relaxed">{{
@@ -223,7 +223,7 @@ const projectNum = (index: number): string => {
                   <span
                     v-for="tag in project.tags"
                     :key="tag"
-                    class="rounded-full border border-white/[0.06] bg-white/[0.02] px-3.5 py-1.5 text-[11px] font-medium text-gray-500 transition-all duration-300 hover:border-primary-500/20 hover:text-primary-400 hover:bg-primary-500/[0.04]"
+                    class="rounded-full border border-white/6 bg-white/2 px-3.5 py-1.5 text-[11px] font-medium text-gray-500 transition-all duration-300 hover:border-primary-500/20 hover:text-primary-400 hover:bg-primary-500/4"
                   >
                     {{ tag }}
                   </span>
@@ -232,7 +232,7 @@ const projectNum = (index: number): string => {
 
               <!-- Device Mockup Side (7 cols) -->
               <div
-                class="lg:col-span-7 relative transition-all duration-1000 delay-[400ms]"
+                class="lg:col-span-7 relative transition-all duration-1000 delay-400"
                 :class="[
                   visibleProjects.has(project.id)
                     ? 'opacity-100 translate-y-0'
@@ -244,19 +244,19 @@ const projectNum = (index: number): string => {
               >
                 <!-- Device Stage -->
                 <div
-                  class="relative flex items-center justify-center min-h-[500px] sm:min-h-[600px]"
+                  class="relative flex items-center justify-center min-h-125 sm:min-h-150"
                   style="perspective: 1200px"
                 >
                   <!-- Ambient glow -->
                   <div
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-gradient-to-br opacity-[0.06] blur-[80px] transition-all duration-700"
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full bg-linear-to-br opacity-[0.06] blur-[80px] transition-all duration-700"
                     :class="project.color"
                     :style="getParallax(project.id, 0.3)"
                   ></div>
 
                   <!-- Secondary ambient -->
                   <div
-                    class="absolute top-1/3 left-1/3 h-[200px] w-[200px] rounded-full bg-primary-500/[0.03] blur-[60px] transition-all duration-700"
+                    class="absolute top-1/3 left-1/3 h-50 w-50 rounded-full bg-primary-500/3 blur-[60px] transition-all duration-700"
                     :style="getParallax(project.id, -0.5)"
                   ></div>
 
@@ -297,7 +297,7 @@ const projectNum = (index: number): string => {
                         </div>
                         <!-- Reflection -->
                         <div
-                          class="mt-2 mx-auto w-[85%] h-[60px] bg-gradient-to-b from-white/[0.02] to-transparent rounded-b-2xl blur-sm"
+                          class="mt-2 mx-auto w-[85%] h-15 bg-linear-to-b from-white/2 to-transparent rounded-b-2xl blur-sm"
                         ></div>
                       </div>
 
@@ -322,7 +322,7 @@ const projectNum = (index: number): string => {
                         </div>
                         <!-- Floor shadow -->
                         <div
-                          class="mt-4 mx-auto w-[60%] h-6 rounded-full blur-xl bg-gradient-to-r opacity-20"
+                          class="mt-4 mx-auto w-[60%] h-6 rounded-full blur-xl bg-linear-to-r opacity-20"
                           :class="project.color"
                         ></div>
                       </div>
@@ -332,7 +332,7 @@ const projectNum = (index: number): string => {
                         class="hidden md:block absolute z-0 transition-all duration-700 ease-out cursor-pointer"
                         :class="[
                           visibleProjects.has(project.id)
-                            ? 'opacity-60 -translate-x-0'
+                            ? 'opacity-60 translate-x-0'
                             : 'opacity-0 -translate-x-12',
                         ]"
                         style="
@@ -370,7 +370,7 @@ const projectNum = (index: number): string => {
                         </div>
                         <!-- Reflection -->
                         <div
-                          class="mt-2 mx-auto w-[85%] h-[60px] bg-gradient-to-b from-white/[0.02] to-transparent rounded-b-2xl blur-sm"
+                          class="mt-2 mx-auto w-[85%] h-15 bg-linear-to-b from-white/2 to-transparent rounded-b-2xl blur-sm"
                         ></div>
                       </div>
                     </template>
@@ -396,7 +396,7 @@ const projectNum = (index: number): string => {
                           />
                         </div>
                         <div
-                          class="mt-4 mx-auto w-[60%] h-6 rounded-full blur-xl bg-gradient-to-r opacity-20"
+                          class="mt-4 mx-auto w-[60%] h-6 rounded-full blur-xl bg-linear-to-r opacity-20"
                           :class="project.color"
                         ></div>
                       </div>
@@ -415,12 +415,12 @@ const projectNum = (index: number): string => {
                     :style="getDeviceTilt(project.id)"
                   >
                     <!-- Styled placeholder phone -->
-                    <div class="relative mx-auto w-[240px] sm:w-[280px]">
+                    <div class="relative mx-auto w-60 sm:w-70">
                       <div
-                        class="absolute -inset-3 rounded-[3rem] bg-white/[0.02] blur-xl pointer-events-none"
+                        class="absolute -inset-3 rounded-[3rem] bg-white/2 blur-xl pointer-events-none"
                       ></div>
                       <div
-                        class="relative rounded-[2.2rem] bg-gradient-to-b from-gray-600 via-gray-700 to-gray-800 p-[3px] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)]"
+                        class="relative rounded-[2.2rem] bg-linear-to-b from-gray-600 via-gray-700 to-gray-800 p-0.75 shadow-[0_25px_60px_-12px_rgba(0,0,0,0.5)]"
                       >
                         <div
                           class="relative rounded-[2.05rem] bg-[#1a1a2e] overflow-hidden"
@@ -429,11 +429,11 @@ const projectNum = (index: number): string => {
                             class="absolute top-2.5 left-1/2 z-20 -translate-x-1/2"
                           >
                             <div
-                              class="h-[22px] w-[90px] rounded-full bg-black"
+                              class="h-5.5 w-22.5 rounded-full bg-black"
                             ></div>
                           </div>
                           <div
-                            class="relative overflow-hidden bg-gradient-to-br"
+                            class="relative overflow-hidden bg-linear-to-br"
                             :class="project.color"
                             style="aspect-ratio: 9 / 19.5"
                           >
@@ -469,7 +469,7 @@ const projectNum = (index: number): string => {
                             class="absolute bottom-1.5 left-1/2 z-20 -translate-x-1/2"
                           >
                             <div
-                              class="h-[4px] w-[100px] rounded-full bg-white/20"
+                              class="h-1 w-25 rounded-full bg-white/20"
                             ></div>
                           </div>
                         </div>
@@ -477,7 +477,7 @@ const projectNum = (index: number): string => {
                     </div>
                     <!-- Floor shadow -->
                     <div
-                      class="mt-4 mx-auto w-[60%] h-6 rounded-full blur-xl bg-gradient-to-r opacity-20"
+                      class="mt-4 mx-auto w-[60%] h-6 rounded-full blur-xl bg-linear-to-r opacity-20"
                       :class="project.color"
                     ></div>
                   </div>
@@ -485,7 +485,7 @@ const projectNum = (index: number): string => {
                   <!-- Screenshot dots -->
                   <div
                     v-if="project.screenshots.length > 1"
-                    class="absolute bottom-6 left-1/2 z-30 -translate-x-1/2 flex items-center gap-2 rounded-full bg-dark-900/80 backdrop-blur-sm border border-white/[0.06] px-3 py-2"
+                    class="absolute bottom-6 left-1/2 z-30 -translate-x-1/2 flex items-center gap-2 rounded-full bg-dark-900/80 backdrop-blur-sm border border-white/6 px-3 py-2"
                   >
                     <button
                       v-for="(_, i) in project.screenshots"
@@ -493,7 +493,7 @@ const projectNum = (index: number): string => {
                       class="h-2 rounded-full transition-all duration-300 focus:outline-none"
                       :class="
                         getActive(project) === i
-                          ? 'w-7 bg-gradient-to-r ' + project.color
+                          ? 'w-7 bg-linear-to-r ' + project.color
                           : 'w-2 bg-white/20 hover:bg-white/40'
                       "
                       @click="setActive(project.id, i)"
@@ -512,7 +512,7 @@ const projectNum = (index: number): string => {
           class="relative h-px mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         >
           <div
-            class="h-px bg-gradient-to-r from-transparent via-white/[0.05] to-transparent"
+            class="h-px bg-linear-to-r from-transparent via-white/5 to-transparent"
           ></div>
         </div>
       </article>
