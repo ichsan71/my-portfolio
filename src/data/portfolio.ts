@@ -249,8 +249,8 @@ export const projects: Project[] = [
     description:
       "An internal CRM mobile application designed for the sales team at PT Mazta Farma. The app enables real-time KPI performance monitoring, location-based check-in/check-out for field visits, and hierarchical approval workflows — streamlining sales operations and providing management with actionable insights.",
     screenshots: [mybco1, mybco2, mybco3],
-    tags: ["Flutter", "Dart", "Clean Architecture", "REST API", "Google Maps"],
-    role: "Lead Mobile Developer",
+    tags: ["Flutter", "BLOC", "Clean Architecture", "REST API", "Google Maps"],
+    role: "Mobile Engineer",
     color: "from-blue-600 to-cyan-500",
     features: [
       "Real-time KPI dashboards for sales performance tracking",
@@ -266,8 +266,14 @@ export const projects: Project[] = [
     description:
       "A courier management application that empowers delivery personnel to track performance metrics, process deliveries via QR/Barcode scanning, and optimize delivery routes. Built to improve operational efficiency of internal logistics workflows at PT Mazta Farma.",
     screenshots: [],
-    tags: ["Flutter", "Dart", "Clean Architecture", "QR/Barcode Scanner"],
-    role: "Mobile Developer",
+    tags: [
+      "Flutter",
+      "BLOC",
+      "Clean Architecture",
+      "QR/Barcode Scanner",
+      "GraphQL",
+    ],
+    role: "Mobile Engineer",
     color: "from-violet-600 to-purple-500",
     features: [
       "QR/Barcode scanning for delivery verification",
@@ -283,8 +289,15 @@ export const projects: Project[] = [
     description:
       "A marketplace platform focused on skincare, beauty, and health products. Supports both internal management dashboards and external customer-facing storefronts, built with Flutter for cross-platform reach and scalability.",
     screenshots: [skinventory1, skinventory2, skinventory3],
-    tags: ["Flutter", "Dart", "Clean Architecture", "E-Commerce", "Firebase"],
-    role: "Mobile Developer",
+    tags: [
+      "Flutter",
+      "BLOC",
+      "Clean Architecture",
+      "Payment Gateway",
+      "Firebase",
+      "GraphQL",
+    ],
+    role: "Mobile Engineer",
     color: "from-rose-500 to-pink-500",
     features: [
       "Product catalog with advanced search and filtering",

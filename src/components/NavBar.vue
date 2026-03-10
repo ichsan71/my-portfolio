@@ -42,7 +42,7 @@ onUnmounted(() => {
           href="#home"
           class="text-xl font-bold text-white hover:text-primary-400 transition-colors"
         >
-          ichsan<span class="text-primary-400">.</span>dev
+          kamil<span class="text-primary-400">.</span>dev
         </a>
 
         <!-- Desktop Navigation -->

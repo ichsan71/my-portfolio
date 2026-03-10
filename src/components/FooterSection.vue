@@ -9,7 +9,7 @@ import { socialLinks, navLinks } from "@/data/portfolio";
         <!-- Brand -->
         <div>
           <a href="#home" class="text-xl font-bold text-white"
-            >ichsan<span class="text-primary-400">.</span>dev</a
+            >kamil<span class="text-primary-400">.</span>dev</a
           >
           <p class="mt-3 text-sm text-gray-500 leading-relaxed">
             Building scalable mobile experiences with best practices and
