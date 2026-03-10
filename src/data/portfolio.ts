@@ -26,10 +26,10 @@ export const navLinks: NavLink[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: "GitHub", url: "https://github.com/ichsankamil", icon: "github" },
+  { name: "GitHub", url: "https://github.com/ichsan71", icon: "github" },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/ichsankamil",
+    url: "https://www.linkedin.com/in/muhammad-kamil-b76283177/",
     icon: "linkedin",
   },
   {
@@ -260,7 +260,7 @@ export const education: Education = {
 export const aboutMe = {
   name: "Muhammad Ichsan Kamil",
   title: "Mobile Engineer",
-  tagline: "Building scalable mobile experiences with clean architecture",
+  tagline: "Building scalable mobile experiences with best practices",
   bio: `Mobile Engineer with professional experience developing scalable Native & Cross-platform mobile applications using best practices. Experienced in building internal enterprise systems and marketplace platforms, collaborating with cross-functional teams, and managing mobile application releases to production. Passionate about building maintainable, high-performance applications and continuously expanding expertise toward Fullstack Development and scalable system design.`,
   email: "ichsan.kamil71@gmail.com",
   phone: "+6285956177153",

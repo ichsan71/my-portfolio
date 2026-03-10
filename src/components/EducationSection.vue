@@ -31,11 +31,6 @@ import { education } from "@/data/portfolio";
           <div class="relative">
             <!-- University -->
             <div class="flex items-start gap-4 mb-6">
-              <div
-                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary-500/10 text-2xl"
-              >
-                🎓
-              </div>
               <div>
                 <h3 class="text-xl font-semibold text-white">
                   {{ education.degree }}
@@ -60,7 +55,7 @@ import { education } from "@/data/portfolio";
               </div>
               <div class="rounded-xl bg-dark-900 border border-white/5 p-4">
                 <p class="text-lg font-bold text-primary-400 leading-tight">
-                  🏅 Rector's
+                  Rector's
                 </p>
                 <p class="text-sm text-gray-400">{{ education.scholarship }}</p>
               </div>

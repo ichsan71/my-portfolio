@@ -12,7 +12,7 @@ import { socialLinks, navLinks } from "@/data/portfolio";
             >ichsan<span class="text-primary-400">.</span>dev</a
           >
           <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-            Building scalable mobile experiences with clean architecture and
+            Building scalable mobile experiences with best practices and
             user-centric design.
           </p>
         </div>

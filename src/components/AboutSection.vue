@@ -108,7 +108,7 @@ import { aboutMe } from "@/data/portfolio";
             <div
               class="rounded-xl bg-dark-800 border border-white/5 p-4 text-center"
             >
-              <p class="text-2xl font-bold text-primary-400">1+</p>
+              <p class="text-2xl font-bold text-primary-400">3+</p>
               <p class="text-xs text-gray-400 mt-1">Years Professional</p>
             </div>
             <div

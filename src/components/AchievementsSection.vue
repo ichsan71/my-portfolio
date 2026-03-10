@@ -42,11 +42,11 @@ const getIcon = (icon: string) => {
 
           <div class="relative flex gap-4">
             <!-- Icon -->
-            <div
+            <!-- <div
               class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary-500/10 text-2xl"
             >
               {{ getIcon(item.icon) }}
-            </div>
+            </div> -->
 
             <!-- Content -->
             <div>

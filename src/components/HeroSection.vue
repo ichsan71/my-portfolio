@@ -68,8 +68,8 @@ import { aboutMe, socialLinks } from "@/data/portfolio";
       >
         Specializing in
         <span class="text-primary-400 font-medium">Flutter</span>,
-        <span class="text-primary-400 font-medium">Kotlin</span>, and
-        <span class="text-primary-400 font-medium">Clean Architecture</span>
+        <span class="text-primary-400 font-medium">Native </span>
+        <span class="text-primary-400 font-medium">Android & iOS</span>
         to deliver production-ready mobile apps for enterprise and consumer
         markets.
       </p>
