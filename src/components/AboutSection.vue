@@ -173,6 +173,8 @@ import { aboutMe } from "@/data/portfolio";
           <div class="mt-8">
             <a
               :href="aboutMe.resumeUrl"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-500 hover:-translate-y-0.5 shadow-lg shadow-primary-600/25"
             >
               <svg

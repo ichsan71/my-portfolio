@@ -364,5 +364,6 @@ export const aboutMe = {
   phone: "+6285956177153",
   location: "Kab. Bogor, Indonesia",
   availability: "Open to relocation",
-  resumeUrl: "#",
+  resumeUrl:
+    "https://drive.google.com/file/d/12ak1vYsYSQa__KUV-XmCMVD4gjBFcBDq/view?usp=sharing",
 };
