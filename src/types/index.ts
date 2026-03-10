@@ -1,11 +1,13 @@
 export interface Project {
   id: number;
   title: string;
+  subtitle: string;
   description: string;
-  image: string;
+  screenshots: string[];
   tags: string[];
   role: string;
   features: string[];
+  color: string;
   liveUrl?: string;
   repoUrl?: string;
 }

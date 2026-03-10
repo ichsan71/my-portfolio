@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import ExperienceSection from "@/components/ExperienceSection.vue";
 import SkillsSection from "@/components/SkillsSection.vue";
-import ProjectsSection from "@/components/ProjectsSection.vue";
+import ProjectShowcase from "@/components/ProjectShowcase.vue";
 import AchievementsSection from "@/components/AchievementsSection.vue";
 import EducationSection from "@/components/EducationSection.vue";
 import ContactSection from "@/components/ContactSection.vue";
@@ -15,7 +15,7 @@ import ContactSection from "@/components/ContactSection.vue";
     <AboutSection />
     <ExperienceSection />
     <SkillsSection />
-    <ProjectsSection />
+    <ProjectShowcase />
     <AchievementsSection />
     <EducationSection />
     <ContactSection />
