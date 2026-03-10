@@ -8,6 +8,7 @@ import skinventory3 from "@/assets/skinventory_3.png";
 import type {
   Project,
   Skill,
+  SkillGroup,
   NavLink,
   SocialLink,
   Experience,
@@ -39,60 +40,144 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
-export const skills: Skill[] = [
-  // Programming Languages
-  { name: "Kotlin", icon: "kotlin", level: 92, category: "languages" },
-  { name: "Dart", icon: "dart", level: 90, category: "languages" },
-  { name: "Java", icon: "java", level: 82, category: "languages" },
-  { name: "Swift", icon: "swift", level: 70, category: "languages" },
-  { name: "Python", icon: "python", level: 68, category: "languages" },
-  { name: "JavaScript", icon: "javascript", level: 72, category: "languages" },
-  { name: "SQL", icon: "sql", level: 70, category: "languages" },
+export const skillGroups: SkillGroup[] = [
+  {
+    key: "core",
+    title: "Core Technologies",
+    description: "Primary tools and frameworks I work with daily",
+    icon: "zap",
+  },
+  {
+    key: "languages",
+    title: "Programming Languages",
+    description: "Languages I use to build software",
+    icon: "code",
+  },
+  {
+    key: "mobile",
+    title: "Mobile Development",
+    description: "Frameworks and SDKs for mobile apps",
+    icon: "smartphone",
+  },
+  {
+    key: "architecture",
+    title: "Architecture & Patterns",
+    description: "Design principles and architectural patterns",
+    icon: "layers",
+  },
+  {
+    key: "tools",
+    title: "Tools & Environment",
+    description: "Development tools and workflow utilities",
+    icon: "wrench",
+  },
+  {
+    key: "backend",
+    title: "Backend / API",
+    description: "Server-side technologies and integrations",
+    icon: "server",
+  },
+];
 
-  // Mobile Development
-  { name: "Flutter", icon: "flutter", level: 92, category: "mobile" },
+export const skills: Skill[] = [
+  // Core Technologies
+  { name: "Kotlin", icon: "kotlin", level: "Expert", category: "core" },
+  { name: "Flutter", icon: "flutter", level: "Expert", category: "core" },
+  { name: "Dart", icon: "dart", level: "Expert", category: "core" },
   {
     name: "Jetpack Compose",
     icon: "compose",
-    level: 88,
+    level: "Advanced",
+    category: "core",
+  },
+  { name: "Android SDK", icon: "android", level: "Expert", category: "core" },
+
+  // Programming Languages
+  { name: "Java", icon: "java", level: "Advanced", category: "languages" },
+  {
+    name: "Swift",
+    icon: "swift",
+    level: "Intermediate",
+    category: "languages",
+  },
+  {
+    name: "Python",
+    icon: "python",
+    level: "Intermediate",
+    category: "languages",
+  },
+  {
+    name: "JavaScript",
+    icon: "javascript",
+    level: "Intermediate",
+    category: "languages",
+  },
+  { name: "SQL", icon: "sql", level: "Intermediate", category: "languages" },
+
+  // Mobile Development
+  { name: "Android SDK", icon: "android", level: "Expert", category: "mobile" },
+  { name: "Flutter", icon: "flutter", level: "Expert", category: "mobile" },
+  {
+    name: "Jetpack Compose",
+    icon: "compose",
+    level: "Advanced",
     category: "mobile",
   },
-  { name: "Android SDK", icon: "android", level: 90, category: "mobile" },
-  { name: "iOS Development", icon: "ios", level: 65, category: "mobile" },
+  {
+    name: "iOS Development",
+    icon: "ios",
+    level: "Intermediate",
+    category: "mobile",
+  },
 
-  // Architecture & Design Patterns
+  // Architecture & Patterns
   {
     name: "Clean Architecture",
     icon: "architecture",
-    level: 90,
+    level: "Expert",
     category: "architecture",
   },
-  { name: "MVVM", icon: "pattern", level: 88, category: "architecture" },
-  { name: "MVC", icon: "pattern", level: 85, category: "architecture" },
+  {
+    name: "MVVM",
+    icon: "pattern",
+    level: "Advanced",
+    category: "architecture",
+  },
+  { name: "MVC", icon: "pattern", level: "Advanced", category: "architecture" },
   {
     name: "Android Lifecycle",
     icon: "lifecycle",
-    level: 88,
+    level: "Advanced",
     category: "architecture",
   },
 
-  // Tools & Technologies
+  // Tools & Environment
   {
     name: "Android Studio",
     icon: "androidstudio",
-    level: 92,
+    level: "Expert",
     category: "tools",
   },
-  { name: "VS Code", icon: "vscode", level: 88, category: "tools" },
-  { name: "Xcode", icon: "xcode", level: 65, category: "tools" },
-  { name: "Git & GitHub", icon: "git", level: 90, category: "tools" },
-  { name: "Postman", icon: "postman", level: 85, category: "tools" },
+  { name: "Git & GitHub", icon: "git", level: "Expert", category: "tools" },
+  { name: "VS Code", icon: "vscode", level: "Advanced", category: "tools" },
+  { name: "Postman", icon: "postman", level: "Advanced", category: "tools" },
+  { name: "Xcode", icon: "xcode", level: "Intermediate", category: "tools" },
 
   // Backend / API
-  { name: "RESTful APIs", icon: "api", level: 88, category: "backend" },
-  { name: "GraphQL", icon: "graphql", level: 72, category: "backend" },
-  { name: "Firebase", icon: "firebase", level: 80, category: "backend" },
-  { name: "JSON", icon: "json", level: 90, category: "backend" },
+  { name: "RESTful APIs", icon: "api", level: "Advanced", category: "backend" },
+  {
+    name: "Firebase",
+    icon: "firebase",
+    level: "Advanced",
+    category: "backend",
+  },
+  { name: "JSON", icon: "json", level: "Expert", category: "backend" },
+  {
+    name: "GraphQL",
+    icon: "graphql",
+    level: "Intermediate",
+    category: "backend",
+  },
 ];
 
 export const experiences: Experience[] = [

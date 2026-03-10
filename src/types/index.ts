@@ -15,8 +15,21 @@ export interface Project {
 export interface Skill {
   name: string;
   icon: string;
-  level: number;
-  category: "languages" | "mobile" | "architecture" | "tools" | "backend";
+  level: "Expert" | "Advanced" | "Intermediate";
+  category:
+    | "core"
+    | "languages"
+    | "mobile"
+    | "architecture"
+    | "tools"
+    | "backend";
+}
+
+export interface SkillGroup {
+  key: string;
+  title: string;
+  description: string;
+  icon: string;
 }
 
 export interface NavLink {
