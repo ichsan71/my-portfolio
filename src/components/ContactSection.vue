@@ -2,6 +2,9 @@
 import { ref } from "vue";
 import { aboutMe } from "@/data/portfolio";
 
+// Ganti dengan Access Key dari https://web3forms.com (gratis)
+const WEB3FORMS_ACCESS_KEY = "45326ef0-815e-49af-84a3-77a3eb08596e";
+
 const form = ref({
   name: "",
   email: "",
@@ -10,18 +13,45 @@ const form = ref({
 
 const isSubmitting = ref(false);
 const isSubmitted = ref(false);
+const submitError = ref("");
 
 const handleSubmit = async () => {
   isSubmitting.value = true;
-  // Simulate form submission
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  isSubmitting.value = false;
-  isSubmitted.value = true;
-  form.value = { name: "", email: "", message: "" };
+  submitError.value = "";
 
-  setTimeout(() => {
-    isSubmitted.value = false;
-  }, 3000);
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name: form.value.name,
+        email: form.value.email,
+        message: form.value.message,
+        subject: `Portfolio Contact: ${form.value.name}`,
+        from_name: "Portfolio Website",
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      isSubmitted.value = true;
+      form.value = { name: "", email: "", message: "" };
+      setTimeout(() => {
+        isSubmitted.value = false;
+      }, 5000);
+    } else {
+      submitError.value = "Failed to send message. Please try again.";
+    }
+  } catch {
+    submitError.value = "Network error. Please try again later.";
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
@@ -215,6 +245,25 @@ const handleSubmit = async () => {
             >
               <p class="text-sm font-medium text-green-400">
                 ✓ Message sent successfully! I'll get back to you soon.
+              </p>
+            </div>
+          </Transition>
+
+          <!-- Error Message -->
+          <Transition
+            enter-active-class="transition duration-300"
+            enter-from-class="opacity-0 translate-y-2"
+            enter-to-class="opacity-100 translate-y-0"
+            leave-active-class="transition duration-200"
+            leave-from-class="opacity-100"
+            leave-to-class="opacity-0"
+          >
+            <div
+              v-if="submitError"
+              class="rounded-xl bg-red-500/10 border border-red-500/20 p-4 text-center"
+            >
+              <p class="text-sm font-medium text-red-400">
+                ✕ {{ submitError }}
               </p>
             </div>
           </Transition>
