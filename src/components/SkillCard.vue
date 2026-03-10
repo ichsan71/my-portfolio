@@ -13,12 +13,6 @@ const levelStyles: Record<string, string> = {
   Intermediate: "bg-amber-500/10 text-amber-400 border-amber-500/20",
 };
 
-const levelDot: Record<string, string> = {
-  Expert: "bg-emerald-400",
-  Advanced: "bg-primary-400",
-  Intermediate: "bg-amber-400",
-};
-
 const iconMap: Record<string, string> = {
   kotlin:
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",

@@ -1,15 +1,5 @@
 <script setup lang="ts">
 import { achievements } from "@/data/portfolio";
-
-const getIcon = (icon: string) => {
-  const icons: Record<string, string> = {
-    trophy: "🏆",
-    globe: "🌏",
-    star: "⭐",
-    academic: "🎓",
-  };
-  return icons[icon] || "🏅";
-};
 </script>
 
 <template>
