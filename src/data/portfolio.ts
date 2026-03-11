@@ -4,6 +4,7 @@ import mybco3 from "@/assets/mybco_3.png";
 import skinventory1 from "@/assets/skinventory_1.png";
 import skinventory2 from "@/assets/skinventory_2.png";
 import skinventory3 from "@/assets/skinventory_3.png";
+import mazgo1 from "@/assets/mazgo_1.png";
 
 import type {
   Project,
@@ -265,7 +266,7 @@ export const projects: Project[] = [
     subtitle: "Courier Management System",
     description:
       "A courier management application that empowers delivery personnel to track performance metrics, process deliveries via QR/Barcode scanning, and optimize delivery routes. Built to improve operational efficiency of internal logistics workflows at PT Mazta Farma.",
-    screenshots: [],
+    screenshots: [mazgo1],
     tags: [
       "Flutter",
       "BLOC",
